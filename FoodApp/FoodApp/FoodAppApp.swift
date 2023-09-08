@@ -11,7 +11,9 @@ import SwiftUI
 struct FoodAppApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            let model: FoodModel = DefaultFoodModel()
+            let viewModel = FoodViewModel(model: model)
+            FoodListView(viewModel: viewModel)
         }
     }
 }

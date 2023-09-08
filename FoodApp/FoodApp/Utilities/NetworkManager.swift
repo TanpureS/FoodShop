@@ -48,4 +48,5 @@ final class NetworkManager {
 
 enum NetWorkError: Error {
     case invalidURL
+    case imageDownloadingFailure
 }

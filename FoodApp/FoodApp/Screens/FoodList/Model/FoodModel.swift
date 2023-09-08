@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import SwiftUI
 
 protocol FoodModel: AnyObject {
     func fetchFoodItems() async throws -> [Food]

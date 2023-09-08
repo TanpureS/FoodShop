@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import SwiftUI
 
 final class FoodViewModel: ObservableObject {
     // MARK: Properties

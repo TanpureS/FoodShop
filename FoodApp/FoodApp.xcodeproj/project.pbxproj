@@ -21,8 +21,6 @@
 		5EFD57602AAAF3EE00C64ADC /* DefaultFoodModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EFD575F2AAAF3EE00C64ADC /* DefaultFoodModel.swift */; };
 		5EFD57682AAAF8B400C64ADC /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EFD57672AAAF8B400C64ADC /* NetworkManager.swift */; };
 		5EFD576E2AABA9AF00C64ADC /* FoodCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EFD576D2AABA9AF00C64ADC /* FoodCard.swift */; };
-		5EFD57702AABABB200C64ADC /* RemoteImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EFD576F2AABABB200C64ADC /* RemoteImage.swift */; };
-		5EFD57722AABABE400C64ADC /* FoodRemoteImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EFD57712AABABE400C64ADC /* FoodRemoteImage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,8 +58,6 @@
 		5EFD575F2AAAF3EE00C64ADC /* DefaultFoodModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultFoodModel.swift; sourceTree = "<group>"; };
 		5EFD57672AAAF8B400C64ADC /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		5EFD576D2AABA9AF00C64ADC /* FoodCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodCard.swift; sourceTree = "<group>"; };
-		5EFD576F2AABABB200C64ADC /* RemoteImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteImage.swift; sourceTree = "<group>"; };
-		5EFD57712AABABE400C64ADC /* FoodRemoteImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodRemoteImage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -160,8 +156,6 @@
 			isa = PBXGroup;
 			children = (
 				5EFD576D2AABA9AF00C64ADC /* FoodCard.swift */,
-				5EFD576F2AABABB200C64ADC /* RemoteImage.swift */,
-				5EFD57712AABABE400C64ADC /* FoodRemoteImage.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -357,12 +351,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5EFD57702AABABB200C64ADC /* RemoteImage.swift in Sources */,
 				5EFD57592AAAF27C00C64ADC /* FoodViewModel.swift in Sources */,
 				5EFD57602AAAF3EE00C64ADC /* DefaultFoodModel.swift in Sources */,
 				5EFD57282AAA035A00C64ADC /* FoodListView.swift in Sources */,
 				5EFD576E2AABA9AF00C64ADC /* FoodCard.swift in Sources */,
-				5EFD57722AABABE400C64ADC /* FoodRemoteImage.swift in Sources */,
 				5EFD57682AAAF8B400C64ADC /* NetworkManager.swift in Sources */,
 				5EFD575E2AAAF36C00C64ADC /* Food.swift in Sources */,
 				5EFD57262AAA035A00C64ADC /* FoodAppApp.swift in Sources */,

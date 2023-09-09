@@ -1,2 +1,6 @@
 "food_items_view.title" = "Food Items";
 "food_items_error_message" = "Unable to fetch details. Please try again!";
+
+"cart_view.title" = "My Cart";
+"cart_total.message" = "Your cart total is";
+"cart_empty.message" = "Your cart is empty";

@@ -14,6 +14,11 @@
 		5E8980C02AAC646E00DDBE9B /* ViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E8980BF2AAC646E00DDBE9B /* ViewState.swift */; };
 		5E8980C22AAC65D400DDBE9B /* ProductRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E8980C12AAC65D400DDBE9B /* ProductRow.swift */; };
 		5EA9D1642AAC6BBD00587DE2 /* NumberFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EA9D1632AAC6BBD00587DE2 /* NumberFormatter.swift */; };
+		5EA9D1662AACAE2E00587DE2 /* PaymentButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EA9D1652AACAE2E00587DE2 /* PaymentButton.swift */; };
+		5EA9D1682AACB5B100587DE2 /* PaymentHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EA9D1672AACB5B100587DE2 /* PaymentHandler.swift */; };
+		5EA9D16B2AACBA3600587DE2 /* PaymentProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EA9D16A2AACBA3600587DE2 /* PaymentProcessor.swift */; };
+		5EA9D16D2AACBACF00587DE2 /* PaymentHandler+PKPaymentAuthorizationControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EA9D16C2AACBACF00587DE2 /* PaymentHandler+PKPaymentAuthorizationControllerDelegate.swift */; };
+		5EA9D16F2AACBD1C00587DE2 /* FakePaymentProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EA9D16E2AACBD1C00587DE2 /* FakePaymentProcessor.swift */; };
 		5EFD57262AAA035A00C64ADC /* FoodAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EFD57252AAA035A00C64ADC /* FoodAppApp.swift */; };
 		5EFD57282AAA035A00C64ADC /* FoodListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EFD57272AAA035A00C64ADC /* FoodListView.swift */; };
 		5EFD572A2AAA035C00C64ADC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5EFD57292AAA035C00C64ADC /* Assets.xcassets */; };
@@ -55,6 +60,11 @@
 		5E8980BF2AAC646E00DDBE9B /* ViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewState.swift; sourceTree = "<group>"; };
 		5E8980C12AAC65D400DDBE9B /* ProductRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductRow.swift; sourceTree = "<group>"; };
 		5EA9D1632AAC6BBD00587DE2 /* NumberFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberFormatter.swift; sourceTree = "<group>"; };
+		5EA9D1652AACAE2E00587DE2 /* PaymentButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentButton.swift; sourceTree = "<group>"; };
+		5EA9D1672AACB5B100587DE2 /* PaymentHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentHandler.swift; sourceTree = "<group>"; };
+		5EA9D16A2AACBA3600587DE2 /* PaymentProcessor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentProcessor.swift; sourceTree = "<group>"; };
+		5EA9D16C2AACBACF00587DE2 /* PaymentHandler+PKPaymentAuthorizationControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PaymentHandler+PKPaymentAuthorizationControllerDelegate.swift"; sourceTree = "<group>"; };
+		5EA9D16E2AACBD1C00587DE2 /* FakePaymentProcessor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakePaymentProcessor.swift; sourceTree = "<group>"; };
 		5EFD57222AAA035A00C64ADC /* FoodApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FoodApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5EFD57252AAA035A00C64ADC /* FoodAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodAppApp.swift; sourceTree = "<group>"; };
 		5EFD57272AAA035A00C64ADC /* FoodListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodListView.swift; sourceTree = "<group>"; };
@@ -107,6 +117,16 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		5EA9D1692AACB9D200587DE2 /* Payments */ = {
+			isa = PBXGroup;
+			children = (
+				5EA9D1672AACB5B100587DE2 /* PaymentHandler.swift */,
+				5EA9D16C2AACBACF00587DE2 /* PaymentHandler+PKPaymentAuthorizationControllerDelegate.swift */,
+				5EA9D16A2AACBA3600587DE2 /* PaymentProcessor.swift */,
+			);
+			path = Payments;
+			sourceTree = "<group>";
+		};
 		5EFD57192AAA035A00C64ADC = {
 			isa = PBXGroup;
 			children = (
@@ -146,6 +166,7 @@
 			children = (
 				5E8980B32AAC4A5D00DDBE9B /* FakeFoodModel.swift */,
 				5EFD572C2AAA035C00C64ADC /* Preview Assets.xcassets */,
+				5EA9D16E2AACBD1C00587DE2 /* FakePaymentProcessor.swift */,
 			);
 			path = "Preview Content";
 			sourceTree = "<group>";
@@ -182,6 +203,7 @@
 				5E8980C12AAC65D400DDBE9B /* ProductRow.swift */,
 				5EFD576D2AABA9AF00C64ADC /* FoodCard.swift */,
 				5E8980B92AAC60BA00DDBE9B /* CartView.swift */,
+				5EA9D1652AACAE2E00587DE2 /* PaymentButton.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -206,6 +228,7 @@
 		5EFD57532AAAF14D00C64ADC /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				5EA9D1692AACB9D200587DE2 /* Payments */,
 				5EFD575D2AAAF36C00C64ADC /* Food.swift */,
 			);
 			path = Models;
@@ -386,13 +409,18 @@
 				5EFD57282AAA035A00C64ADC /* FoodListView.swift in Sources */,
 				5E8980C22AAC65D400DDBE9B /* ProductRow.swift in Sources */,
 				5EFD576E2AABA9AF00C64ADC /* FoodCard.swift in Sources */,
+				5EA9D16F2AACBD1C00587DE2 /* FakePaymentProcessor.swift in Sources */,
 				5EFD57682AAAF8B400C64ADC /* NetWorkError.swift in Sources */,
+				5EA9D16B2AACBA3600587DE2 /* PaymentProcessor.swift in Sources */,
 				5E8980BC2AAC611200DDBE9B /* CartButton.swift in Sources */,
+				5EA9D1662AACAE2E00587DE2 /* PaymentButton.swift in Sources */,
 				5E8980B42AAC4A5D00DDBE9B /* FakeFoodModel.swift in Sources */,
 				5E8980BA2AAC60BA00DDBE9B /* CartView.swift in Sources */,
 				5EFD575E2AAAF36C00C64ADC /* Food.swift in Sources */,
 				5E8980B82AAC501E00DDBE9B /* LoaderView.swift in Sources */,
+				5EA9D1682AACB5B100587DE2 /* PaymentHandler.swift in Sources */,
 				5E8980C02AAC646E00DDBE9B /* ViewState.swift in Sources */,
+				5EA9D16D2AACBACF00587DE2 /* PaymentHandler+PKPaymentAuthorizationControllerDelegate.swift in Sources */,
 				5EFD57262AAA035A00C64ADC /* FoodAppApp.swift in Sources */,
 				5EFD575B2AAAF30900C64ADC /* FoodModel.swift in Sources */,
 			);
@@ -565,7 +593,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = shivaji.tanpure.FoodApp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.FoodApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -593,7 +621,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = shivaji.tanpure.FoodApp;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.FoodApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;

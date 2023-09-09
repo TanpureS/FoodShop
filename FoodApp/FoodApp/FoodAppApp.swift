@@ -12,7 +12,8 @@ struct FoodAppApp: App {
     var body: some Scene {
         WindowGroup {
             let model: FoodModel = DefaultFoodModel()
-            let viewModel = FoodViewModel(model: model)
+            let paymentHandler: PaymentProcessor = PaymentHandler()
+            let viewModel = FoodViewModel(model: model, paymentHandler: paymentHandler)
             FoodListView(viewModel: viewModel)
         }
     }

@@ -17,18 +17,22 @@ struct CartView: View {
                     ProductRow(viewModel: viewModel, product: item)
                 }
                 HStack {
-                    Text("Your cart total is")
+                    Text("cart_total.message")
                     Spacer()
                     Text("£\(viewModel.total.stringValue())")
                         .bold()
                 }
                 .padding()
                 
+                PaymentButton(action: { viewModel.pay() })
+                    .padding()
+                
             } else {
-                Text("Your cart is empty.")
+                Text("cart_empty.message")
+                    .font(.title)
             }
         }
-        .navigationTitle(Text("My Cart"))
+        .navigationTitle(Text("cart_view.title"))
         .padding(.top)
     }
 }
@@ -36,7 +40,7 @@ struct CartView: View {
 struct CartView_Previews: PreviewProvider {
     static var previews: some View {
         CartView(
-            viewModel: FoodViewModel(model: FakeFoodModel())
+            viewModel: FoodViewModel(model: FakeFoodModel(), paymentHandler: FakePaymentProcessor())
         )
     }
 }

@@ -17,13 +17,21 @@ final class FoodViewModel: ObservableObject {
     private(set) var state: ViewState<[Food], Error> = .idle
     
     // Cart-related variables
-    @Published private(set) var items: [Food] = []
-    @Published private(set) var total: Double = 0
+    @Published
+    private(set) var items: [Food] = []
+    @Published
+    private(set) var total: Double = 0
+    
+    // Payment-related variables
+    let paymentHandler: PaymentProcessor
+    @Published
+    var paymentSuccess = false
     
     // MARK: Initialiser
     
-    init(model: FoodModel) {
+    init(model: FoodModel, paymentHandler: PaymentProcessor) {
         self.model = model
+        self.paymentHandler = paymentHandler
     }
     
     // MARK: API
@@ -51,6 +59,15 @@ final class FoodViewModel: ObservableObject {
     func removeFromCart(item: Food) {
         items = items.filter { $0.id != item.id }
         total -= item.price
+    }
+    
+    // Call the startPayment function from the PaymentHandler. In the completion handler, set the paymentSuccess variable
+    func pay() {
+        paymentHandler.startPayment(products: items, total: total) { success in
+            self.paymentSuccess = success
+            self.items = []
+            self.total = 0
+        }
     }
 }
 

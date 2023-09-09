@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		5E5D85F72AACC51100F2BFF8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5E5D85F62AACC51100F2BFF8 /* LaunchScreen.storyboard */; };
+		5E5D85FC2AACCFF100F2BFF8 /* _Stub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E5D85FB2AACCFF100F2BFF8 /* _Stub.swift */; };
+		5E5D85FE2AACD08900F2BFF8 /* XCTestsCase+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E5D85FD2AACD08900F2BFF8 /* XCTestsCase+Extensions.swift */; };
+		5E5D86012AACD32400F2BFF8 /* FoodListViewModel_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E5D86002AACD32400F2BFF8 /* FoodListViewModel_Tests.swift */; };
+		5E5D86032AACD3AA00F2BFF8 /* FoodModelStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E5D86022AACD3AA00F2BFF8 /* FoodModelStub.swift */; };
+		5E5D86052AACD44D00F2BFF8 /* PaymentHandlerStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E5D86042AACD44D00F2BFF8 /* PaymentHandlerStub.swift */; };
 		5E8980B42AAC4A5D00DDBE9B /* FakeFoodModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E8980B32AAC4A5D00DDBE9B /* FakeFoodModel.swift */; };
 		5E8980B82AAC501E00DDBE9B /* LoaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E8980B72AAC501E00DDBE9B /* LoaderView.swift */; };
 		5E8980BA2AAC60BA00DDBE9B /* CartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E8980B92AAC60BA00DDBE9B /* CartView.swift */; };
@@ -24,7 +29,6 @@
 		5EFD57282AAA035A00C64ADC /* FoodListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EFD57272AAA035A00C64ADC /* FoodListView.swift */; };
 		5EFD572A2AAA035C00C64ADC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5EFD57292AAA035C00C64ADC /* Assets.xcassets */; };
 		5EFD572D2AAA035C00C64ADC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5EFD572C2AAA035C00C64ADC /* Preview Assets.xcassets */; };
-		5EFD57372AAA035C00C64ADC /* FoodAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EFD57362AAA035C00C64ADC /* FoodAppTests.swift */; };
 		5EFD57412AAA035C00C64ADC /* FoodAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EFD57402AAA035C00C64ADC /* FoodAppUITests.swift */; };
 		5EFD57432AAA035C00C64ADC /* FoodAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EFD57422AAA035C00C64ADC /* FoodAppUITestsLaunchTests.swift */; };
 		5EFD57572AAAF19500C64ADC /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5EFD57562AAAF19500C64ADC /* Localizable.strings */; };
@@ -55,6 +59,11 @@
 
 /* Begin PBXFileReference section */
 		5E5D85F62AACC51100F2BFF8 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		5E5D85FB2AACCFF100F2BFF8 /* _Stub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = _Stub.swift; sourceTree = "<group>"; };
+		5E5D85FD2AACD08900F2BFF8 /* XCTestsCase+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "XCTestsCase+Extensions.swift"; sourceTree = "<group>"; };
+		5E5D86002AACD32400F2BFF8 /* FoodListViewModel_Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodListViewModel_Tests.swift; sourceTree = "<group>"; };
+		5E5D86022AACD3AA00F2BFF8 /* FoodModelStub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodModelStub.swift; sourceTree = "<group>"; };
+		5E5D86042AACD44D00F2BFF8 /* PaymentHandlerStub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentHandlerStub.swift; sourceTree = "<group>"; };
 		5E8980B32AAC4A5D00DDBE9B /* FakeFoodModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeFoodModel.swift; sourceTree = "<group>"; };
 		5E8980B72AAC501E00DDBE9B /* LoaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoaderView.swift; sourceTree = "<group>"; };
 		5E8980B92AAC60BA00DDBE9B /* CartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartView.swift; sourceTree = "<group>"; };
@@ -73,7 +82,6 @@
 		5EFD57292AAA035C00C64ADC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5EFD572C2AAA035C00C64ADC /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		5EFD57322AAA035C00C64ADC /* FoodAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FoodAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		5EFD57362AAA035C00C64ADC /* FoodAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodAppTests.swift; sourceTree = "<group>"; };
 		5EFD573C2AAA035C00C64ADC /* FoodAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FoodAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5EFD57402AAA035C00C64ADC /* FoodAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodAppUITests.swift; sourceTree = "<group>"; };
 		5EFD57422AAA035C00C64ADC /* FoodAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
@@ -111,6 +119,40 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5E5D85F82AACCF4C00F2BFF8 /* TestDoubles */ = {
+			isa = PBXGroup;
+			children = (
+				5E5D86022AACD3AA00F2BFF8 /* FoodModelStub.swift */,
+				5E5D86042AACD44D00F2BFF8 /* PaymentHandlerStub.swift */,
+			);
+			path = TestDoubles;
+			sourceTree = "<group>";
+		};
+		5E5D85F92AACCF6700F2BFF8 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				5E5D85FF2AACD2F200F2BFF8 /* FoodList */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		5E5D85FA2AACCFCC00F2BFF8 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				5E5D85FB2AACCFF100F2BFF8 /* _Stub.swift */,
+				5E5D85FD2AACD08900F2BFF8 /* XCTestsCase+Extensions.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		5E5D85FF2AACD2F200F2BFF8 /* FoodList */ = {
+			isa = PBXGroup;
+			children = (
+				5E5D86002AACD32400F2BFF8 /* FoodListViewModel_Tests.swift */,
+			);
+			path = FoodList;
+			sourceTree = "<group>";
+		};
 		5EA9D1622AAC6B8200587DE2 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -168,8 +210,8 @@
 			isa = PBXGroup;
 			children = (
 				5E8980B32AAC4A5D00DDBE9B /* FakeFoodModel.swift */,
-				5EFD572C2AAA035C00C64ADC /* Preview Assets.xcassets */,
 				5EA9D16E2AACBD1C00587DE2 /* FakePaymentProcessor.swift */,
+				5EFD572C2AAA035C00C64ADC /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
 			sourceTree = "<group>";
@@ -177,7 +219,9 @@
 		5EFD57352AAA035C00C64ADC /* FoodAppTests */ = {
 			isa = PBXGroup;
 			children = (
-				5EFD57362AAA035C00C64ADC /* FoodAppTests.swift */,
+				5E5D85FA2AACCFCC00F2BFF8 /* Utilities */,
+				5E5D85F92AACCF6700F2BFF8 /* Screens */,
+				5E5D85F82AACCF4C00F2BFF8 /* TestDoubles */,
 			);
 			path = FoodAppTests;
 			sourceTree = "<group>";
@@ -346,6 +390,7 @@
 					};
 					5EFD57312AAA035C00C64ADC = {
 						CreatedOnToolsVersion = 13.4.1;
+						LastSwiftMigration = 1340;
 						TestTargetID = 5EFD57212AAA035A00C64ADC;
 					};
 					5EFD573B2AAA035C00C64ADC = {
@@ -434,7 +479,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5EFD57372AAA035C00C64ADC /* FoodAppTests.swift in Sources */,
+				5E5D85FE2AACD08900F2BFF8 /* XCTestsCase+Extensions.swift in Sources */,
+				5E5D86032AACD3AA00F2BFF8 /* FoodModelStub.swift in Sources */,
+				5E5D86052AACD44D00F2BFF8 /* PaymentHandlerStub.swift in Sources */,
+				5E5D86012AACD32400F2BFF8 /* FoodListViewModel_Tests.swift in Sources */,
+				5E5D85FC2AACCFF100F2BFF8 /* _Stub.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -640,14 +689,21 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = shivaji.tanpure.FoodAppTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FoodApp.app/FoodApp";
@@ -659,10 +715,16 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = shivaji.tanpure.FoodAppTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";

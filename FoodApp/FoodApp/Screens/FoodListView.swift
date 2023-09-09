@@ -12,15 +12,15 @@ struct FoodListView: View {
     
     @ObservedObject var viewModel: FoodViewModel
     var columns = [GridItem(.adaptive(minimum: 160), spacing: 20)]
-    
+        
     var body: some View {
         NavigationView {
             ScrollView {
-                if viewModel.isLoading {
-                    ProgressView()
-                } else {
+                if case .loading = viewModel.state {
+                    LoaderView()
+                } else if case .loaded(let items) = viewModel.state {
                     LazyVGrid(columns: columns, spacing: 20) {
-                        ForEach(viewModel.items, id: \.id) { item in
+                        ForEach(items, id: \.id) { item in
                             FoodCard(viewModel: viewModel, food: item)
                         }
                     }
@@ -31,6 +31,11 @@ struct FoodListView: View {
             .task {
                 viewModel.loadData()
             }
+            .alert("food_items_error_message", isPresented: $viewModel.shouldDisplayErrorAlert) {
+                Button("Retry", role: .cancel) { [viewModel] in
+                    viewModel.loadData()
+                }
+            }
         }
     }
 }
@@ -40,23 +45,5 @@ struct FoodListView_Previews: PreviewProvider {
         FoodListView(
             viewModel: FoodViewModel(model: FakeFoodModel())
         )
-    }
-    
-    private class FakeFoodModel: FoodModel {
-        func loadImage(from url: String) async throws -> UIImage {
-            return UIImage(named: "food-placeholder")!
-        }
-        func fetchFoodItems() async throws -> [Food] {
-            [Food(
-                id: 1,
-                name: "Asian Flank Steak",
-                price: 12.3,
-                imageURL: "https://seanallen-course-backend.herokuapp.com//images//appetizers//asian-flank-steak.jpg",
-                description: "",
-                calories: 300,
-                carbs: 0,
-                protein: 14
-            )]
-        }
     }
 }

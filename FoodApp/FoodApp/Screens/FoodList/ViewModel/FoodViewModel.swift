@@ -10,11 +10,17 @@ import SwiftUI
 
 final class FoodViewModel: ObservableObject {
     // MARK: Properties
-    
-    @Published private(set) var items: [Food] = []
-    @Published private(set) var isLoading = false
-    
+
     private let model: FoodModel
+    
+    enum ViewState {
+        case idle
+        case loading
+        case loaded(items: [Food])
+    }
+    
+    @Published var state: ViewState = .idle
+    @Published var shouldDisplayErrorAlert = false
     
     // MARK: Initialiser
     
@@ -26,14 +32,15 @@ final class FoodViewModel: ObservableObject {
     
     @MainActor
     func loadData() {
-        isLoading = true
-        Task {
+        shouldDisplayErrorAlert = false
+        self.state = .loading
+        Task { [weak self] in
             do {
-                items = try await model.fetchFoodItems()
-                isLoading = false
-            } catch(let error) {
-                isLoading = false
-                // TODO error handling
+                let items = try await model.fetchFoodItems()
+                self?.state = .loaded(items: items)
+            } catch {
+                self?.state = .idle
+                shouldDisplayErrorAlert = true
             }
         }
     }

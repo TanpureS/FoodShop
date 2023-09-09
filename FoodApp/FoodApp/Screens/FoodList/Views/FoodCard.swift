@@ -26,7 +26,7 @@ struct FoodCard: View {
                     Text(food.name)
                         .bold()
                     
-                    Text("£\(food.price)")
+                    Text("£\(food.itemPrice)")
                         .font(.caption)
                 }
                 .padding()
@@ -55,24 +55,7 @@ struct FoodCard_Previews: PreviewProvider {
     static var previews: some View {
         FoodCard(
             viewModel: FoodViewModel(model: FakeFoodModel()),
-            food: FoodCard_Previews.foodItem
+            food: FakeFoodModel.foodItem
         )
     }
-    
-    private class FakeFoodModel: FoodModel {
-        func fetchFoodItems() async throws -> [Food] {
-            [FoodCard_Previews.foodItem]
-        }
-    }
-    
-    static let foodItem = Food(
-        id: 1,
-        name: "Asian Flank Steak",
-        price: 12.3,
-        imageURL: "https://seanallen-course-backend.herokuapp.com//images//appetizers//asian-flank-steak.jpg",
-        description: "",
-        calories: 300,
-        carbs: 0,
-        protein: 14
-    )
 }

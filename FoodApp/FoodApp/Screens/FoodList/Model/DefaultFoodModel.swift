@@ -10,10 +10,17 @@ import SwiftUI
 
 final class DefaultFoodModel: FoodModel {
     
+    let baseURL = "https://seanallen-course-backend.herokuapp.com/"
+    
+    private enum Endpoint: String {
+        case appetizers = "swiftui-fundamentals/appetizers"
+    }
+    
     // MARK: API
     
     func fetchFoodItems() async throws -> [Food] {
-        guard let url = URL(string: NetworkManager.shared.appetizerURL) else {
+        let requestURL = baseURL + Endpoint.appetizers.rawValue
+        guard let url = URL(string: requestURL) else {
             throw NetWorkError.invalidURL
         }
         let (data, _) = try await URLSession.shared.data(from: url)

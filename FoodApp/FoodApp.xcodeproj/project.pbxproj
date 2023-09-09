@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5E8980B42AAC4A5D00DDBE9B /* FakeFoodModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E8980B32AAC4A5D00DDBE9B /* FakeFoodModel.swift */; };
+		5E8980B82AAC501E00DDBE9B /* LoaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E8980B72AAC501E00DDBE9B /* LoaderView.swift */; };
 		5EFD57262AAA035A00C64ADC /* FoodAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EFD57252AAA035A00C64ADC /* FoodAppApp.swift */; };
 		5EFD57282AAA035A00C64ADC /* FoodListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EFD57272AAA035A00C64ADC /* FoodListView.swift */; };
 		5EFD572A2AAA035C00C64ADC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5EFD57292AAA035C00C64ADC /* Assets.xcassets */; };
@@ -19,7 +21,7 @@
 		5EFD575B2AAAF30900C64ADC /* FoodModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EFD575A2AAAF30900C64ADC /* FoodModel.swift */; };
 		5EFD575E2AAAF36C00C64ADC /* Food.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EFD575D2AAAF36C00C64ADC /* Food.swift */; };
 		5EFD57602AAAF3EE00C64ADC /* DefaultFoodModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EFD575F2AAAF3EE00C64ADC /* DefaultFoodModel.swift */; };
-		5EFD57682AAAF8B400C64ADC /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EFD57672AAAF8B400C64ADC /* NetworkManager.swift */; };
+		5EFD57682AAAF8B400C64ADC /* NetWorkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EFD57672AAAF8B400C64ADC /* NetWorkError.swift */; };
 		5EFD576E2AABA9AF00C64ADC /* FoodCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EFD576D2AABA9AF00C64ADC /* FoodCard.swift */; };
 /* End PBXBuildFile section */
 
@@ -41,6 +43,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5E8980B32AAC4A5D00DDBE9B /* FakeFoodModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeFoodModel.swift; sourceTree = "<group>"; };
+		5E8980B72AAC501E00DDBE9B /* LoaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoaderView.swift; sourceTree = "<group>"; };
 		5EFD57222AAA035A00C64ADC /* FoodApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FoodApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5EFD57252AAA035A00C64ADC /* FoodAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodAppApp.swift; sourceTree = "<group>"; };
 		5EFD57272AAA035A00C64ADC /* FoodListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodListView.swift; sourceTree = "<group>"; };
@@ -56,7 +60,7 @@
 		5EFD575A2AAAF30900C64ADC /* FoodModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodModel.swift; sourceTree = "<group>"; };
 		5EFD575D2AAAF36C00C64ADC /* Food.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Food.swift; sourceTree = "<group>"; };
 		5EFD575F2AAAF3EE00C64ADC /* DefaultFoodModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultFoodModel.swift; sourceTree = "<group>"; };
-		5EFD57672AAAF8B400C64ADC /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		5EFD57672AAAF8B400C64ADC /* NetWorkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetWorkError.swift; sourceTree = "<group>"; };
 		5EFD576D2AABA9AF00C64ADC /* FoodCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodCard.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -121,6 +125,7 @@
 		5EFD572B2AAA035C00C64ADC /* Preview Content */ = {
 			isa = PBXGroup;
 			children = (
+				5E8980B32AAC4A5D00DDBE9B /* FakeFoodModel.swift */,
 				5EFD572C2AAA035C00C64ADC /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
@@ -163,6 +168,7 @@
 		5EFD57512AAAF12E00C64ADC /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				5E8980B72AAC501E00DDBE9B /* LoaderView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -215,7 +221,7 @@
 		5EFD57662AAAF89000C64ADC /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
-				5EFD57672AAAF8B400C64ADC /* NetworkManager.swift */,
+				5EFD57672AAAF8B400C64ADC /* NetWorkError.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -355,8 +361,10 @@
 				5EFD57602AAAF3EE00C64ADC /* DefaultFoodModel.swift in Sources */,
 				5EFD57282AAA035A00C64ADC /* FoodListView.swift in Sources */,
 				5EFD576E2AABA9AF00C64ADC /* FoodCard.swift in Sources */,
-				5EFD57682AAAF8B400C64ADC /* NetworkManager.swift in Sources */,
+				5EFD57682AAAF8B400C64ADC /* NetWorkError.swift in Sources */,
+				5E8980B42AAC4A5D00DDBE9B /* FakeFoodModel.swift in Sources */,
 				5EFD575E2AAAF36C00C64ADC /* Food.swift in Sources */,
+				5E8980B82AAC501E00DDBE9B /* LoaderView.swift in Sources */,
 				5EFD57262AAA035A00C64ADC /* FoodAppApp.swift in Sources */,
 				5EFD575B2AAAF30900C64ADC /* FoodModel.swift in Sources */,
 			);

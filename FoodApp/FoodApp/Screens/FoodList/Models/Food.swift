@@ -16,6 +16,10 @@ struct Food: Identifiable, Decodable {
     let calories: Int
     let carbs: Int
     let protein: Int
+    
+    var itemPrice: String {
+        String(format: "$%.02f", price)
+    }
 }
 
 struct AppetizerResponse: Decodable {

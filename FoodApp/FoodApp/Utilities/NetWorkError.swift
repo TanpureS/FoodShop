@@ -10,4 +10,5 @@ import Foundation
 enum NetWorkError: Error {
     case invalidURL
     case imageDownloadingFailure
+    case unknown
 }

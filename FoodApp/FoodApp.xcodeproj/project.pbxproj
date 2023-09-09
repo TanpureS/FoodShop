@@ -207,7 +207,6 @@
 			isa = PBXGroup;
 			children = (
 				5EFD575D2AAAF36C00C64ADC /* Food.swift */,
-				5E8980BF2AAC646E00DDBE9B /* ViewState.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -244,6 +243,7 @@
 		5EFD57662AAAF89000C64ADC /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				5E8980BF2AAC646E00DDBE9B /* ViewState.swift */,
 				5EFD57672AAAF8B400C64ADC /* NetWorkError.swift */,
 			);
 			path = Utilities;

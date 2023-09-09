@@ -13,8 +13,8 @@ final class FoodViewModel: ObservableObject {
 
     private let model: FoodModel
 
-    @Published var state: ViewState = .idle
-    @Published var shouldDisplayErrorAlert = false
+    @Published
+    private(set) var state: ViewState<[Food], Error> = .idle
     
     // Cart-related variables
     @Published private(set) var items: [Food] = []
@@ -30,16 +30,14 @@ final class FoodViewModel: ObservableObject {
     
     @MainActor
     func loadData() {
-        guard state.data.isEmpty else { return }
-        shouldDisplayErrorAlert = false
-        self.state = .loading
-        Task { [weak self] in
+        guard state.data == nil else { return }
+        state = .loading
+        Task {
             do {
                 let items = try await model.fetchFoodItems()
-                self?.state = .loaded(items: items)
+                state = .loaded(items)
             } catch {
-                self?.state = .idle
-                shouldDisplayErrorAlert = true
+                state = .error(error)
             }
         }
     }

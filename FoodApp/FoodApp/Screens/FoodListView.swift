@@ -31,7 +31,7 @@ struct FoodListView: View {
             .task {
                 viewModel.loadData()
             }
-            .alert("food_items_error_message", isPresented: $viewModel.shouldDisplayErrorAlert) {
+            .alert("food_items_error_message", isPresented: .constant(viewModel.state.error != nil)) {
                 Button("Retry", role: .cancel) { [viewModel] in
                     viewModel.loadData()
                 }

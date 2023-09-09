@@ -22,11 +22,10 @@ struct FoodCard: View {
                 } placeholder: {
                     ProgressView()
                 }
-                VStack(alignment: .leading) {
+                VStack(alignment: .leading, spacing: 8) {
                     Text(food.name)
                         .bold()
-                    
-                    Text("£\(food.itemPrice)")
+                    Text("£\(food.price.stringValue())")
                         .font(.caption)
                 }
                 .padding()
@@ -38,7 +37,7 @@ struct FoodCard: View {
             .shadow(radius: 3)
             
             Button {
-                // cartManager.addToCart(product: product)
+                 viewModel.addToCart(item: food)
             } label: {
                 Image(systemName: "plus")
                     .padding(10)

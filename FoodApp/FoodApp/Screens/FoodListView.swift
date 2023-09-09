@@ -36,7 +36,15 @@ struct FoodListView: View {
                     viewModel.loadData()
                 }
             }
+            .toolbar {
+                NavigationLink {
+                    CartView(viewModel: viewModel)
+                } label: {
+                    CartButton(numberOfProducts: viewModel.items.count)
+                }
+            }
         }
+        .navigationViewStyle(StackNavigationViewStyle())
     }
 }
 

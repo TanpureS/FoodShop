@@ -9,6 +9,11 @@
 /* Begin PBXBuildFile section */
 		5E8980B42AAC4A5D00DDBE9B /* FakeFoodModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E8980B32AAC4A5D00DDBE9B /* FakeFoodModel.swift */; };
 		5E8980B82AAC501E00DDBE9B /* LoaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E8980B72AAC501E00DDBE9B /* LoaderView.swift */; };
+		5E8980BA2AAC60BA00DDBE9B /* CartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E8980B92AAC60BA00DDBE9B /* CartView.swift */; };
+		5E8980BC2AAC611200DDBE9B /* CartButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E8980BB2AAC611200DDBE9B /* CartButton.swift */; };
+		5E8980C02AAC646E00DDBE9B /* ViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E8980BF2AAC646E00DDBE9B /* ViewState.swift */; };
+		5E8980C22AAC65D400DDBE9B /* ProductRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E8980C12AAC65D400DDBE9B /* ProductRow.swift */; };
+		5EA9D1642AAC6BBD00587DE2 /* NumberFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EA9D1632AAC6BBD00587DE2 /* NumberFormatter.swift */; };
 		5EFD57262AAA035A00C64ADC /* FoodAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EFD57252AAA035A00C64ADC /* FoodAppApp.swift */; };
 		5EFD57282AAA035A00C64ADC /* FoodListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EFD57272AAA035A00C64ADC /* FoodListView.swift */; };
 		5EFD572A2AAA035C00C64ADC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5EFD57292AAA035C00C64ADC /* Assets.xcassets */; };
@@ -45,6 +50,11 @@
 /* Begin PBXFileReference section */
 		5E8980B32AAC4A5D00DDBE9B /* FakeFoodModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeFoodModel.swift; sourceTree = "<group>"; };
 		5E8980B72AAC501E00DDBE9B /* LoaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoaderView.swift; sourceTree = "<group>"; };
+		5E8980B92AAC60BA00DDBE9B /* CartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartView.swift; sourceTree = "<group>"; };
+		5E8980BB2AAC611200DDBE9B /* CartButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartButton.swift; sourceTree = "<group>"; };
+		5E8980BF2AAC646E00DDBE9B /* ViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewState.swift; sourceTree = "<group>"; };
+		5E8980C12AAC65D400DDBE9B /* ProductRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductRow.swift; sourceTree = "<group>"; };
+		5EA9D1632AAC6BBD00587DE2 /* NumberFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberFormatter.swift; sourceTree = "<group>"; };
 		5EFD57222AAA035A00C64ADC /* FoodApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FoodApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5EFD57252AAA035A00C64ADC /* FoodAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodAppApp.swift; sourceTree = "<group>"; };
 		5EFD57272AAA035A00C64ADC /* FoodListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodListView.swift; sourceTree = "<group>"; };
@@ -89,6 +99,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5EA9D1622AAC6B8200587DE2 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				5EA9D1632AAC6BBD00587DE2 /* NumberFormatter.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		5EFD57192AAA035A00C64ADC = {
 			isa = PBXGroup;
 			children = (
@@ -115,6 +133,7 @@
 				5EFD57252AAA035A00C64ADC /* FoodAppApp.swift */,
 				5EFD57552AAAF17200C64ADC /* Assets */,
 				5EFD57512AAAF12E00C64ADC /* Components */,
+				5EA9D1622AAC6B8200587DE2 /* Extensions */,
 				5EFD572B2AAA035C00C64ADC /* Preview Content */,
 				5EFD574F2AAAF08700C64ADC /* Screens */,
 				5EFD57662AAAF89000C64ADC /* Utilities */,
@@ -160,7 +179,9 @@
 		5EFD57502AAAF12100C64ADC /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				5E8980C12AAC65D400DDBE9B /* ProductRow.swift */,
 				5EFD576D2AABA9AF00C64ADC /* FoodCard.swift */,
+				5E8980B92AAC60BA00DDBE9B /* CartView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -169,6 +190,7 @@
 			isa = PBXGroup;
 			children = (
 				5E8980B72AAC501E00DDBE9B /* LoaderView.swift */,
+				5E8980BB2AAC611200DDBE9B /* CartButton.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -185,6 +207,7 @@
 			isa = PBXGroup;
 			children = (
 				5EFD575D2AAAF36C00C64ADC /* Food.swift */,
+				5E8980BF2AAC646E00DDBE9B /* ViewState.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -358,13 +381,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				5EFD57592AAAF27C00C64ADC /* FoodViewModel.swift in Sources */,
+				5EA9D1642AAC6BBD00587DE2 /* NumberFormatter.swift in Sources */,
 				5EFD57602AAAF3EE00C64ADC /* DefaultFoodModel.swift in Sources */,
 				5EFD57282AAA035A00C64ADC /* FoodListView.swift in Sources */,
+				5E8980C22AAC65D400DDBE9B /* ProductRow.swift in Sources */,
 				5EFD576E2AABA9AF00C64ADC /* FoodCard.swift in Sources */,
 				5EFD57682AAAF8B400C64ADC /* NetWorkError.swift in Sources */,
+				5E8980BC2AAC611200DDBE9B /* CartButton.swift in Sources */,
 				5E8980B42AAC4A5D00DDBE9B /* FakeFoodModel.swift in Sources */,
+				5E8980BA2AAC60BA00DDBE9B /* CartView.swift in Sources */,
 				5EFD575E2AAAF36C00C64ADC /* Food.swift in Sources */,
 				5E8980B82AAC501E00DDBE9B /* LoaderView.swift in Sources */,
+				5E8980C02AAC646E00DDBE9B /* ViewState.swift in Sources */,
 				5EFD57262AAA035A00C64ADC /* FoodAppApp.swift in Sources */,
 				5EFD575B2AAAF30900C64ADC /* FoodModel.swift in Sources */,
 			);

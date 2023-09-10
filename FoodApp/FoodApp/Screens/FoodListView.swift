@@ -40,7 +40,7 @@ struct FoodListView: View {
                 NavigationLink {
                     CartView(viewModel: viewModel)
                 } label: {
-                    CartButton(numberOfProducts: viewModel.items.count)
+                    CartButton(numberOfProducts: viewModel.cartItems.count)
                 }
             }
         }

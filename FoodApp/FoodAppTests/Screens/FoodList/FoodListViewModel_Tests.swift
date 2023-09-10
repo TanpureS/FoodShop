@@ -68,14 +68,16 @@ class FoodListViewModel_Tests: XCTestCase {
 }
 
 extension Food {
-    fileprivate static let items = [Food(
-        id: 1,
-        name: "Asian Flank Steak",
-        price: 12.3,
-        imageURL: "https://seanallen-course-backend.herokuapp.com//images//appetizers//asian-flank-steak.jpg",
-        description: "",
-        calories: 300,
-        carbs: 0,
-        protein: 14
-    )]
+    fileprivate static let items = [
+        Food(
+            id: 1,
+            name: "Asian Flank Steak",
+            price: 12.3,
+            imageURL: "https://seanallen-course-backend.herokuapp.com//images//appetizers//asian-flank-steak.jpg",
+            description: "",
+            calories: 300,
+            carbs: 0,
+            protein: 14
+        )
+    ]
 }

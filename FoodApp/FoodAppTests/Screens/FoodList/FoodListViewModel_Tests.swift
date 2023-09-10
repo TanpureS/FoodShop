@@ -81,7 +81,7 @@ class FoodListViewModel_Tests: XCTestCase {
        
         XCTAssertEqual(sut.filteredItems.count, 1)
 
-        //pass search text
+        //passing search query name mismatch
         searchTextGetter = { "Shrimp" }
         sut.searchText = searchTextGetter()
         
@@ -103,7 +103,7 @@ class FoodListViewModel_Tests: XCTestCase {
        
         XCTAssertEqual(sut.filteredItems.count, 1)
 
-        //pass search text
+        //passing matching name search query
         searchTextGetter = { "Asian" }
         sut.searchText = searchTextGetter()
         

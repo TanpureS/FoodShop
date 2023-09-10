@@ -12,15 +12,15 @@ struct FoodListView: View {
     
     @ObservedObject var viewModel: FoodViewModel
     var columns = [GridItem(.adaptive(minimum: 160), spacing: 20)]
-        
+
     var body: some View {
         NavigationView {
             ScrollView {
                 if case .loading = viewModel.state {
                     LoaderView()
-                } else if case .loaded(let items) = viewModel.state {
+                } else if case .loaded = viewModel.state {
                     LazyVGrid(columns: columns, spacing: 20) {
-                        ForEach(items, id: \.id) { item in
+                        ForEach(viewModel.filteredItems, id: \.id) { item in
                             FoodCard(viewModel: viewModel, food: item)
                         }
                     }
@@ -31,7 +31,7 @@ struct FoodListView: View {
             .task {
                 viewModel.loadData()
             }
-            .alert("food_items_error_message", isPresented: .constant(viewModel.state.error != nil)) {
+            .alert("food_items_error.message", isPresented: .constant(viewModel.state.error != nil)) {
                 Button("Retry", role: .cancel) { [viewModel] in
                     viewModel.loadData()
                 }
@@ -45,6 +45,7 @@ struct FoodListView: View {
             }
         }
         .navigationViewStyle(StackNavigationViewStyle())
+        .searchable(text: $viewModel.searchText, prompt: "food_items_search.placeholder")
     }
 }
 

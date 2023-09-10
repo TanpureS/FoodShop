@@ -11,4 +11,5 @@ enum NetWorkError: Error {
     case invalidURL
     case imageDownloadingFailure
     case sessionNotStarted
+    case unknown
 }

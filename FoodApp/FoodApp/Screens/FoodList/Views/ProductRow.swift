@@ -13,14 +13,21 @@ struct ProductRow: View {
     
     var body: some View {
         HStack(spacing: 20) {
-            AsyncImage(url: URL(string: product.imageURL)) { image in
-                image.resizable()
-                    .aspectRatio(contentMode: .fit)
-                    .frame(width: 50)
-                    .cornerRadius(10)
-            } placeholder: {
-                ProgressView()
+            AsyncImage(
+                url: URL(string: product.imageURL),
+                transaction: Transaction(animation: .default)
+            ) { phase in
+                switch phase {
+                case .success(let image):
+                    image.resizable()
+                        .aspectRatio(contentMode: .fit)
+                        .frame(width: 50)
+                        .cornerRadius(10)
+                default:
+                    ProgressView()
+                }
             }
+            
             VStack(alignment: .leading, spacing: 10) {
                 Text(product.name)
                     .bold()

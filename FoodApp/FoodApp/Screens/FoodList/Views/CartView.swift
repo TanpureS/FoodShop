@@ -12,8 +12,8 @@ struct CartView: View {
     
     var body: some View {
         ScrollView {
-            if viewModel.items.count > 0 {
-                ForEach(viewModel.items, id: \.id) { item in
+            if viewModel.cartItems.count > 0 {
+                ForEach(viewModel.cartItems, id: \.id) { item in
                     ProductRow(viewModel: viewModel, product: item)
                 }
                 HStack {

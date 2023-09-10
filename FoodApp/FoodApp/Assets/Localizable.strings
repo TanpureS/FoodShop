@@ -1,5 +1,6 @@
 "food_items_view.title" = "Appetizers";
-"food_items_error_message" = "Unable to fetch details. Please try again!";
+"food_items_error.message" = "Unable to fetch details. Please try again!";
+"food_items_search.placeholder" = "Search your favourite...";
 
 "cart_view.title" = "My Cart";
 "cart_total.message" = "Your cart total is";

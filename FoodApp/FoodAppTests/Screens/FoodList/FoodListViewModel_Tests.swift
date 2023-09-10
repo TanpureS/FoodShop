@@ -17,6 +17,9 @@ class FoodListViewModel_Tests: XCTestCase {
     
     private lazy var sut = FoodViewModel(model: model, paymentHandler: paymentHandler)
     
+    // MARK: Stubs
+    lazy var searchTextGetter = getter(of: sut.searchText)
+        
     // MARK: Tests
     
     func test_StateIs_IdleByDefault() {
@@ -64,6 +67,50 @@ class FoodListViewModel_Tests: XCTestCase {
         XCTAssertFalse(isResponseEmpty)
         
         XCTAssertEqual(sut.state.data?.count, 1)
+    }
+    
+    func test_State_ItemsEmptyByPassingSearchStringNotMatching() async throws {
+        model.fetchFoodItemsStub = { Food.items }
+        
+        await sut.loadData()
+        
+        waitUntil(sut.$state) { state in  state.data != nil }
+
+        // Tests search texts is empty initially & filtered array contains 1 item
+        XCTAssertTrue(sut.searchText.isEmpty)
+       
+        XCTAssertEqual(sut.filteredItems.count, 1)
+
+        //pass search text
+        searchTextGetter = { "Shrimp" }
+        sut.searchText = searchTextGetter()
+        
+        // Tests search texts is not empty & filtered array is an empty
+        XCTAssertFalse(sut.searchText.isEmpty)
+        
+        XCTAssertEqual(sut.filteredItems.count, 0)
+    }
+    
+    func test_State_ItemsContainsValueByPassingSearchStringMatching() async throws {
+        model.fetchFoodItemsStub = { Food.items }
+        
+        await sut.loadData()
+        
+        waitUntil(sut.$state) { state in  state.data != nil }
+
+        // Tests search texts is empty initially & filtered array contains 1 item
+        XCTAssertTrue(sut.searchText.isEmpty)
+       
+        XCTAssertEqual(sut.filteredItems.count, 1)
+
+        //pass search text
+        searchTextGetter = { "Asian" }
+        sut.searchText = searchTextGetter()
+        
+        // Tests search texts is not empty & filtered array contains 1 item
+        XCTAssertFalse(sut.searchText.isEmpty)
+        
+        XCTAssertEqual(sut.filteredItems.count, 1)
     }
 }
 

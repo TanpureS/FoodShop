@@ -26,6 +26,18 @@ final class FoodViewModel: ObservableObject {
     let paymentHandler: PaymentProcessor
     @Published
     var paymentSuccess = false
+
+    // Searching-related variables
+    @Published
+    var searchText = ""
+
+    var filteredItems: [Food] {
+        if searchText.isEmpty {
+            return state.data ?? []
+        } else {
+            return state.data?.filter { $0.name.contains(searchText) } ?? []
+        }
+    }
     
     // MARK: Initialiser
     

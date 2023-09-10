@@ -1,8 +1,8 @@
 //
-//  NetworkManager.swift
+//  NetWorkError.swift
 //  FoodApp
 //
-//  Created by Shivaji Tanpure on 08/09/23.
+//  Created by Shivaji Tanpure on 10/09/23.
 //
 
 import Foundation
@@ -10,5 +10,5 @@ import Foundation
 enum NetWorkError: Error {
     case invalidURL
     case imageDownloadingFailure
-    case unknown
+    case sessionNotStarted
 }

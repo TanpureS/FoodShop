@@ -14,6 +14,8 @@
 		5E5D86032AACD3AA00F2BFF8 /* FoodModelStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E5D86022AACD3AA00F2BFF8 /* FoodModelStub.swift */; };
 		5E5D86052AACD44D00F2BFF8 /* PaymentHandlerStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E5D86042AACD44D00F2BFF8 /* PaymentHandlerStub.swift */; };
 		5E5D86072AAD96D300F2BFF8 /* Cart+ViewModel_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E5D86062AAD96D300F2BFF8 /* Cart+ViewModel_Tests.swift */; };
+		5E5D860B2AADB88E00F2BFF8 /* NetWorkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E5D860A2AADB88E00F2BFF8 /* NetWorkError.swift */; };
+		5E5D860E2AADD0ED00F2BFF8 /* herokuapp.cer in Resources */ = {isa = PBXBuildFile; fileRef = 5E5D860D2AADC42900F2BFF8 /* herokuapp.cer */; };
 		5E8980B42AAC4A5D00DDBE9B /* FakeFoodModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E8980B32AAC4A5D00DDBE9B /* FakeFoodModel.swift */; };
 		5E8980B82AAC501E00DDBE9B /* LoaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E8980B72AAC501E00DDBE9B /* LoaderView.swift */; };
 		5E8980BA2AAC60BA00DDBE9B /* CartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E8980B92AAC60BA00DDBE9B /* CartView.swift */; };
@@ -37,7 +39,7 @@
 		5EFD575B2AAAF30900C64ADC /* FoodModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EFD575A2AAAF30900C64ADC /* FoodModel.swift */; };
 		5EFD575E2AAAF36C00C64ADC /* Food.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EFD575D2AAAF36C00C64ADC /* Food.swift */; };
 		5EFD57602AAAF3EE00C64ADC /* DefaultFoodModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EFD575F2AAAF3EE00C64ADC /* DefaultFoodModel.swift */; };
-		5EFD57682AAAF8B400C64ADC /* NetWorkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EFD57672AAAF8B400C64ADC /* NetWorkError.swift */; };
+		5EFD57682AAAF8B400C64ADC /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EFD57672AAAF8B400C64ADC /* NetworkManager.swift */; };
 		5EFD576E2AABA9AF00C64ADC /* FoodCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EFD576D2AABA9AF00C64ADC /* FoodCard.swift */; };
 /* End PBXBuildFile section */
 
@@ -66,6 +68,8 @@
 		5E5D86022AACD3AA00F2BFF8 /* FoodModelStub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodModelStub.swift; sourceTree = "<group>"; };
 		5E5D86042AACD44D00F2BFF8 /* PaymentHandlerStub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentHandlerStub.swift; sourceTree = "<group>"; };
 		5E5D86062AAD96D300F2BFF8 /* Cart+ViewModel_Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Cart+ViewModel_Tests.swift"; sourceTree = "<group>"; };
+		5E5D860A2AADB88E00F2BFF8 /* NetWorkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetWorkError.swift; sourceTree = "<group>"; };
+		5E5D860D2AADC42900F2BFF8 /* herokuapp.cer */ = {isa = PBXFileReference; lastKnownFileType = file; path = herokuapp.cer; sourceTree = "<group>"; };
 		5E8980B32AAC4A5D00DDBE9B /* FakeFoodModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeFoodModel.swift; sourceTree = "<group>"; };
 		5E8980B72AAC501E00DDBE9B /* LoaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoaderView.swift; sourceTree = "<group>"; };
 		5E8980B92AAC60BA00DDBE9B /* CartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartView.swift; sourceTree = "<group>"; };
@@ -92,7 +96,7 @@
 		5EFD575A2AAAF30900C64ADC /* FoodModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodModel.swift; sourceTree = "<group>"; };
 		5EFD575D2AAAF36C00C64ADC /* Food.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Food.swift; sourceTree = "<group>"; };
 		5EFD575F2AAAF3EE00C64ADC /* DefaultFoodModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultFoodModel.swift; sourceTree = "<group>"; };
-		5EFD57672AAAF8B400C64ADC /* NetWorkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetWorkError.swift; sourceTree = "<group>"; };
+		5EFD57672AAAF8B400C64ADC /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		5EFD576D2AABA9AF00C64ADC /* FoodCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodCard.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -156,6 +160,14 @@
 			path = FoodList;
 			sourceTree = "<group>";
 		};
+		5E5D860C2AADC40900F2BFF8 /* Certificates */ = {
+			isa = PBXGroup;
+			children = (
+				5E5D860D2AADC42900F2BFF8 /* herokuapp.cer */,
+			);
+			path = Certificates;
+			sourceTree = "<group>";
+		};
 		5EA9D1622AAC6B8200587DE2 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -197,14 +209,15 @@
 		5EFD57242AAA035A00C64ADC /* FoodApp */ = {
 			isa = PBXGroup;
 			children = (
+				5E5D85F62AACC51100F2BFF8 /* LaunchScreen.storyboard */,
 				5EFD57252AAA035A00C64ADC /* FoodAppApp.swift */,
 				5EFD57552AAAF17200C64ADC /* Assets */,
+				5E5D860C2AADC40900F2BFF8 /* Certificates */,
 				5EFD57512AAAF12E00C64ADC /* Components */,
 				5EA9D1622AAC6B8200587DE2 /* Extensions */,
 				5EFD572B2AAA035C00C64ADC /* Preview Content */,
 				5EFD574F2AAAF08700C64ADC /* Screens */,
 				5EFD57662AAAF89000C64ADC /* Utilities */,
-				5E5D85F62AACC51100F2BFF8 /* LaunchScreen.storyboard */,
 			);
 			path = FoodApp;
 			sourceTree = "<group>";
@@ -316,8 +329,9 @@
 		5EFD57662AAAF89000C64ADC /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				5E5D860A2AADB88E00F2BFF8 /* NetWorkError.swift */,
+				5EFD57672AAAF8B400C64ADC /* NetworkManager.swift */,
 				5E8980BF2AAC646E00DDBE9B /* ViewState.swift */,
-				5EFD57672AAAF8B400C64ADC /* NetWorkError.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -430,6 +444,7 @@
 				5EFD572D2AAA035C00C64ADC /* Preview Assets.xcassets in Resources */,
 				5EFD57572AAAF19500C64ADC /* Localizable.strings in Resources */,
 				5E5D85F72AACC51100F2BFF8 /* LaunchScreen.storyboard in Resources */,
+				5E5D860E2AADD0ED00F2BFF8 /* herokuapp.cer in Resources */,
 				5EFD572A2AAA035C00C64ADC /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -455,6 +470,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5E5D860B2AADB88E00F2BFF8 /* NetWorkError.swift in Sources */,
 				5EFD57592AAAF27C00C64ADC /* FoodViewModel.swift in Sources */,
 				5EA9D1642AAC6BBD00587DE2 /* NumberFormatter.swift in Sources */,
 				5EFD57602AAAF3EE00C64ADC /* DefaultFoodModel.swift in Sources */,
@@ -462,7 +478,7 @@
 				5E8980C22AAC65D400DDBE9B /* ProductRow.swift in Sources */,
 				5EFD576E2AABA9AF00C64ADC /* FoodCard.swift in Sources */,
 				5EA9D16F2AACBD1C00587DE2 /* FakePaymentProcessor.swift in Sources */,
-				5EFD57682AAAF8B400C64ADC /* NetWorkError.swift in Sources */,
+				5EFD57682AAAF8B400C64ADC /* NetworkManager.swift in Sources */,
 				5EA9D16B2AACBA3600587DE2 /* PaymentProcessor.swift in Sources */,
 				5E8980BC2AAC611200DDBE9B /* CartButton.swift in Sources */,
 				5EA9D1662AACAE2E00587DE2 /* PaymentButton.swift in Sources */,

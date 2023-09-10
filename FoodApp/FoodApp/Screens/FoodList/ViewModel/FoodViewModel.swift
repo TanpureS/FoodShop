@@ -66,7 +66,7 @@ final class FoodViewModel: ObservableObject {
         paymentHandler.startPayment(products: cartItems, total: total) { success in
             self.paymentSuccess = success
             self.cartItems = []
-            self.total = 0
+            self.total = 0.0
         }
     }
 }

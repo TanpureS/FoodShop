@@ -77,6 +77,40 @@ class Cart_ViewModel_Tests: XCTestCase {
         //Test total items price
         XCTAssertEqual(sut.total, 19.29)
     }
+    
+    // MARK: Payment Tests
+    
+    func test_StateIs_CartEmptyAfterPaymentSuccessfullyProcessed() {
+        
+        paymentHandler.startPaymentStub = { items, total, completion in
+            //test you have been ordered some food items
+            XCTAssertFalse(items.isEmpty)
+            
+            //Test total price of items
+            XCTAssertEqual(total, 19.29)
+            
+            completion(true)
+        }
+        
+        // Adding 2 items into cart
+        let firstItem = Food.items[0]
+        sut.addToCart(item: firstItem)
+    
+        let secondItem = Food.items[1]
+        sut.addToCart(item: secondItem)
+        
+        //make a payment
+        sut.pay()
+        
+        //check state after payment
+        XCTAssertTrue(sut.paymentSuccess)
+        
+        //Test cart isEmpty
+        XCTAssertTrue(sut.cartItems.isEmpty)
+        
+        //Test total is 0.0
+        XCTAssertEqual(sut.total, 0.0)
+    }
 }
 
 extension Food {

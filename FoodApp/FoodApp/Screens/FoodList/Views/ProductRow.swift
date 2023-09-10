@@ -50,8 +50,8 @@ struct ProductRow: View {
 struct ProductRow_Previews: PreviewProvider {
     static var previews: some View {
         ProductRow(
-            viewModel: FoodViewModel(model: FakeFoodModel(), paymentHandler: FakePaymentProcessor()),
-            product: FakeFoodModel.foodItem
+            viewModel: FoodViewModel(dataService: FakeDataService(), paymentHandler: FakePaymentProcessor()),
+            product: FakeDataService.foodItem
         )
     }
 }

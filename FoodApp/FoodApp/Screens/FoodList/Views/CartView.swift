@@ -40,7 +40,7 @@ struct CartView: View {
 struct CartView_Previews: PreviewProvider {
     static var previews: some View {
         CartView(
-            viewModel: FoodViewModel(model: FakeFoodModel(), paymentHandler: FakePaymentProcessor())
+            viewModel: FoodViewModel(dataService: FakeDataService(), paymentHandler: FakePaymentProcessor())
         )
     }
 }

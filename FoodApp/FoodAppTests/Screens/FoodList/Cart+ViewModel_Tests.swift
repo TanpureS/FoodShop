@@ -11,10 +11,10 @@ import XCTest
 class Cart_ViewModel_Tests: XCTestCase {
     // MARK: Properties
     
-    private let model = FoodModelStub()
+    private let dataService = DataServiceStub()
     private let paymentHandler = PaymentHandlerStub()
     
-    private lazy var sut = FoodViewModel(model: model, paymentHandler: paymentHandler)
+    private lazy var sut = FoodViewModel(dataService: dataService, paymentHandler: paymentHandler)
         
     // MARK: Cart Tests
    

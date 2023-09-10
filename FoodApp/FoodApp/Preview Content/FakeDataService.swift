@@ -1,5 +1,5 @@
 //
-//  FakeFoodModel.swift
+//  FakeDataService.swift
 //  FoodApp
 //
 //  Created by Shivaji Tanpure on 09/09/23.
@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-final class FakeFoodModel: FoodModel {
+final class FakeDataService: DataService {
     
     static let foodItem = Food(
         id: 1,

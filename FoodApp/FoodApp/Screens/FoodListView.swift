@@ -52,7 +52,7 @@ struct FoodListView: View {
 struct FoodListView_Previews: PreviewProvider {
     static var previews: some View {
         FoodListView(
-            viewModel: FoodViewModel(model: FakeFoodModel(), paymentHandler: FakePaymentProcessor())
+            viewModel: FoodViewModel(dataService: FakeDataService(), paymentHandler: FakePaymentProcessor())
         )
     }
 }

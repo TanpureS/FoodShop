@@ -11,7 +11,7 @@ import SwiftUI
 final class FoodViewModel: ObservableObject {
     // MARK: Properties
 
-    private let model: FoodModel
+    private let dataService: DataService
 
     @Published
     private(set) var state: ViewState<[Food], Error> = .idle
@@ -41,8 +41,8 @@ final class FoodViewModel: ObservableObject {
     
     // MARK: Initialiser
     
-    init(model: FoodModel, paymentHandler: PaymentProcessor) {
-        self.model = model
+    init(dataService: DataService, paymentHandler: PaymentProcessor) {
+        self.dataService = dataService
         self.paymentHandler = paymentHandler
     }
     
@@ -54,7 +54,7 @@ final class FoodViewModel: ObservableObject {
         state = .loading
         Task {
             do {
-                let items = try await model.fetchFoodItems()
+                let items = try await dataService.fetchFoodItems()
                 state = .loaded(items)
             } catch {
                 state = .error(error)

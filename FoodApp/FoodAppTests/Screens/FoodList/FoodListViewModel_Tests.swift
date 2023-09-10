@@ -12,10 +12,10 @@ import SwiftUI
 class FoodListViewModel_Tests: XCTestCase {
     // MARK: Properties
     
-    private let model = FoodModelStub()
+    private let dataService = DataServiceStub()
     private let paymentHandler = PaymentHandlerStub()
     
-    private lazy var sut = FoodViewModel(model: model, paymentHandler: paymentHandler)
+    private lazy var sut = FoodViewModel(dataService: dataService, paymentHandler: paymentHandler)
     
     // MARK: Stubs
     lazy var searchTextGetter = getter(of: sut.searchText)
@@ -30,7 +30,7 @@ class FoodListViewModel_Tests: XCTestCase {
     }
     
     func test_StateIs_LoadingWhenFetchingIsNotCompleted() async {
-        model.fetchFoodItemsStub = { [] }
+        dataService.fetchFoodItemsStub = { [] }
         
         await sut.loadData()
         
@@ -41,7 +41,7 @@ class FoodListViewModel_Tests: XCTestCase {
     }
     
     func test_StateIs_Error_WhenModelThrowsError() async {
-        model.fetchFoodItemsStub = { throw NetWorkError.unknown }
+        dataService.fetchFoodItemsStub = { throw NetWorkError.unknown }
         
         await sut.loadData()
         
@@ -54,7 +54,7 @@ class FoodListViewModel_Tests: XCTestCase {
     }
     
     func test_StateIs_Loaded_ApiResponseContainsExpectedData() async throws {
-        model.fetchFoodItemsStub = { Food.items }
+        dataService.fetchFoodItemsStub = { Food.items }
         
         await sut.loadData()
         
@@ -70,7 +70,7 @@ class FoodListViewModel_Tests: XCTestCase {
     }
     
     func test_State_ItemsEmptyByPassingSearchStringNotMatching() async throws {
-        model.fetchFoodItemsStub = { Food.items }
+        dataService.fetchFoodItemsStub = { Food.items }
         
         await sut.loadData()
         
@@ -92,7 +92,7 @@ class FoodListViewModel_Tests: XCTestCase {
     }
     
     func test_State_ItemsContainsValueByPassingSearchStringMatching() async throws {
-        model.fetchFoodItemsStub = { Food.items }
+        dataService.fetchFoodItemsStub = { Food.items }
         
         await sut.loadData()
         

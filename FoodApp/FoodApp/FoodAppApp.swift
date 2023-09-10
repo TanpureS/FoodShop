@@ -11,9 +11,9 @@ import SwiftUI
 struct FoodAppApp: App {
     var body: some Scene {
         WindowGroup {
-            let model: FoodModel = DefaultFoodModel()
+            let dataService: DataService = AppDataService()
             let paymentHandler: PaymentProcessor = PaymentHandler()
-            let viewModel = FoodViewModel(model: model, paymentHandler: paymentHandler)
+            let viewModel = FoodViewModel(dataService: dataService, paymentHandler: paymentHandler)
             FoodListView(viewModel: viewModel)
         }
     }

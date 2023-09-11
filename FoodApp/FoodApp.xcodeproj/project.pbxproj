@@ -263,10 +263,10 @@
 		5EFD57502AAAF12100C64ADC /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				5E8980C12AAC65D400DDBE9B /* ProductRow.swift */,
-				5EFD576D2AABA9AF00C64ADC /* FoodCard.swift */,
 				5E8980B92AAC60BA00DDBE9B /* CartView.swift */,
+				5EFD576D2AABA9AF00C64ADC /* FoodCard.swift */,
 				5EA9D1652AACAE2E00587DE2 /* PaymentButton.swift */,
+				5E8980C12AAC65D400DDBE9B /* ProductRow.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -274,8 +274,8 @@
 		5EFD57512AAAF12E00C64ADC /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				5E8980B72AAC501E00DDBE9B /* LoaderView.swift */,
 				5E8980BB2AAC611200DDBE9B /* CartButton.swift */,
+				5E8980B72AAC501E00DDBE9B /* LoaderView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -309,8 +309,8 @@
 		5EFD575C2AAAF31300C64ADC /* DataService */ = {
 			isa = PBXGroup;
 			children = (
-				5EFD575A2AAAF30900C64ADC /* DataService.swift */,
 				5EFD575F2AAAF3EE00C64ADC /* AppDataService.swift */,
+				5EFD575A2AAAF30900C64ADC /* DataService.swift */,
 			);
 			path = DataService;
 			sourceTree = "<group>";

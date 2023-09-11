@@ -18,6 +18,13 @@ final class PaymentHandler: NSObject, PaymentProcessor {
     var paymentStatus = PKPaymentAuthorizationStatus.failure
     var completionHandler: PaymentCompletionHandler?
     
+    private let merchantIdentifier = "merchant.com.example.FoodApp"
+    
+    private enum CountyDetails: String {
+        case countryCode = "GB"
+        case currencyCode = "GBP"
+    }
+    
     static let supportedNetworks: [PKPaymentNetwork] = [
         .visa,
         .masterCard,
@@ -75,10 +82,10 @@ final class PaymentHandler: NSObject, PaymentProcessor {
         // Create a payment request and add all data to it
         let paymentRequest = PKPaymentRequest()
         paymentRequest.paymentSummaryItems = paymentSummaryItems // Set paymentSummaryItems to the paymentRequest
-        paymentRequest.merchantIdentifier = "merchant.com.example.FoodApp"
+        paymentRequest.merchantIdentifier = merchantIdentifier
         paymentRequest.merchantCapabilities = .capability3DS // A security protocol used to authenticate users
-        paymentRequest.countryCode = "GB"
-        paymentRequest.currencyCode = "GBP"
+        paymentRequest.countryCode = CountyDetails.countryCode.rawValue
+        paymentRequest.currencyCode = CountyDetails.currencyCode.rawValue
         paymentRequest.supportedNetworks = PaymentHandler.supportedNetworks // Types of cards supported
         paymentRequest.shippingType = .delivery
         paymentRequest.shippingMethods = shippingMethodCalculator()

@@ -30,7 +30,10 @@ class FoodListViewModel_Tests: XCTestCase {
     }
     
     func test_StateIs_LoadingWhenFetchingIsNotCompleted() async {
-        dataService.fetchFoodItemsStub = { [] }
+        dataService.fetchFoodItemsStub = {
+            sleep(1)
+            return []
+        }
         
         await sut.loadData()
         

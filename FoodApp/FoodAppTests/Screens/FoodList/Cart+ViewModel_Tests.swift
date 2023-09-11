@@ -80,6 +80,29 @@ class Cart_ViewModel_Tests: XCTestCase {
     
     // MARK: Payment Tests
     
+    func test_StateIs_PaymentFailed() {
+        
+        paymentHandler.startPaymentStub = { items, total, completion in
+            //test you have been ordered some food items
+            XCTAssertFalse(items.isEmpty)
+            
+            //Test total price of items
+            XCTAssertEqual(total, 12.3)
+            
+            completion(false)
+        }
+        
+        // Add item into cart
+        let firstItem = Food.items[0]
+        sut.addToCart(item: firstItem)
+    
+        //make a payment
+        sut.pay()
+        
+        //check state after payment
+        XCTAssertFalse(sut.paymentSuccess)
+    }
+    
     func test_StateIs_CartEmptyAfterPaymentSuccessfullyProcessed() {
         
         paymentHandler.startPaymentStub = { items, total, completion in
